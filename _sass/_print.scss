@@ -1,0 +1,24 @@
+@page {
+  size: auto;   /* auto is the current printer page size */
+  margin: 0mm;  /* this affects the margin in the printer settings */
+}
+
+.page-margin-top {
+  margin-top: $page-margin;
+}
+.container {
+  margin-left: $page-margin;
+  margin-right: $page-margin;
+}
+
+.header-image{
+  .text-container{
+    h1{
+      font-size: 100%;
+    }
+    p{
+      font-size: 70%;
+      color: $text-color1;
+    }
+  }
+}

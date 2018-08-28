@@ -1,0 +1,146 @@
+<table class="table-program no-margin-top">
+  <tr>
+    <th class="text-center h1" colspan="4">Program</th>
+  </tr>
+
+  {% if include.prog.declaration %}
+  <tr>
+    <td>Declaration of Session Hall Ready</td>
+    <td colspan="2">{% include member.html id=include.prog.declaration %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.call_to_order %}
+  <tr>
+    <td>Call to Order</td>
+    <td colspan="2">{% include member.html id=include.prog.call_to_order %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.introduction_of_tme %}
+  <tr>
+    <td>Introduction of the TME</td>
+    <td colspan="2">{% include member.html id=include.prog.introduction_of_tme %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.welcoming_of_guests %}
+  <tr>
+    <td>Welcoming of Guests</td>
+    <td colspan="2">{% include member.html id=include.prog.welcoming_of_guests %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+    <th class="h1">Education Portion</th>
+    <td colspan="3"></td>
+  </tr>
+
+  {% if include.prog.word_of_the_day %}
+  <tr>
+    <td>Word of the day</td>
+    <td colspan="2">{% include member.html id=include.prog.word_of_the_day %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.table_topics %}
+  <tr>
+    <td>Table topics</td>
+    <td colspan="2">{% include member.html id=include.prog.table_topics %}</td>
+    <td>4-10 mins</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+    <th class="h1">Prepared Speeches</th>
+    <td colspan="3"></td>
+  </tr>
+
+  <tr>
+    <th class="h2">Speaker</th>
+    <th class="h2">Pathway, Level, Project</th>
+    <th class="h2">Title</th>
+    <th class="h2">Duration</th>
+  </tr>
+
+  {% for p in include.prog.presentations %}
+  <tr>
+    <td>{% include member.html id=p.id %}</td>
+    <td>
+      {{ site.data.members[p.id].pathway | default : p.pathway }}
+      {% if site.data.members[p.id].level or p.level %}
+      , Level {{ site.data.members[p.id].level | default : p.level }}
+      {% endif %}
+    </td>
+    <td>{{ p.project }}</td>
+    <td>{{ p.duration }}</td>
+  </tr>
+  {% endfor %}
+
+  {% if include.prog.general_evaluator %}
+  <tr>
+    <td>General Evaluator</td>
+    <td colspan="2">{% include member.html id=include.prog.general_evaluator %}</td>
+    <td></td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.table_topics_evaluator %}
+  <tr>
+    <td>Table topics Evaluator</td>
+    <td colspan="2">{% include member.html id=include.prog.table_topics_evaluator %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+      <th class="h2">Speech Evaluator</th>
+      <th class="h2">Speaker</th>
+      <th class="h2"></th>
+      <th class="h2"></th>
+    </tr>
+
+  {% for p in include.prog.presentations %}
+  <tr>
+    <td>{% include member.html id=p.evaluator %}</td>
+    <td colspan="2">
+      {{ site.data.members[p.id].name | default : p.name }}
+    </td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endfor %}
+
+  {% if include.prog.timer %}
+  <tr>
+    <td>Timer's Report</td>
+    <td colspan="2">{% include member.html id=include.prog.timer %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  {% if include.prog.ahh_counter %}
+  <tr>
+    <td>Ahh counter's Report</td>
+    <td colspan="2">{% include member.html id=include.prog.ahh_counter %}</td>
+    <td>2-3 mins</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+    <th class="h1">Business and Adjournment</th>
+    <td colspan="3"></td>
+  </tr>
+
+  {% if include.prog.closing_remarks %}
+  <tr>
+    <td>Closing Remarks</td>
+    <td colspan="3">{% include member.html id=include.prog.closing_remarks %}</td>
+  </tr>
+  {% endif %}
+
+</table>

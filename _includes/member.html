@@ -1,0 +1,5 @@
+{% if site.data.members[include.id] %}
+{{ site.data.members[include.id].name }}, {{ site.data.members[include.id].title }}
+{% else %}
+{{ include.id }}
+{% endif %}

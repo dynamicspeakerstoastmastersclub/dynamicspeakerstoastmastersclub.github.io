@@ -1,0 +1,19 @@
+<table class="table-program">
+  <tr>
+    <th class="h1 text-center" colspan=4>Member Status</th>
+  </tr>
+  <tr>
+    <th class="h2">Member</th>
+    <th class="h2">Achievements</th>
+    <th class="h2">Current Project</th>
+    <th class="h2">Progress</th>
+  </tr>
+  {% for m in site.data.members %}
+  <tr>
+    <td>{{ m[1].name }}</td>
+    <td>{{ m[1].title }}</td>
+    <td>{% if m[1].pathway %}Level {{ m[1].pathway }}{% else %}--{% endif %}</td>
+    <td>{% if m[1].level %}Level {{ m[1].level }}{% else %}--{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
