@@ -76,8 +76,11 @@
       {% if site.data.members[p.id].level or p.level %}
       , Level {{ site.data.members[p.id].level | default : p.level }}
       {% endif %}
+      {% if p.project %}
+      , {{ p.project }}
+      {% endif %}
     </td>
-    <td>{{ p.project }}</td>
+    <td>{{ p.title }}</td>
     <td>{{ p.duration }}</td>
   </tr>
   {% endfor %}
