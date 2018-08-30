@@ -12,7 +12,7 @@
   <tr>
     <td>{{ m[1].name }}</td>
     <td>{{ m[1].title }}</td>
-    <td>{% if m[1].pathway %}Level {{ m[1].pathway }}{% else %}--{% endif %}</td>
+    <td>{% if m[1].pathway %}{{ m[1].pathway }}{% else %}--{% endif %}</td>
     <td>{% if m[1].level %}Level {{ m[1].level }}{% else %}--{% endif %}</td>
   </tr>
   {% endfor %}
