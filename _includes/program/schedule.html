@@ -108,7 +108,7 @@
   <tr>
     <td>{% include member.html id=p.evaluator %}</td>
     <td colspan="2">
-      {{ site.data.members[p.id].name | default : p.name }}
+      {% include member.html id=i.id %}
     </td>
     <td>2-3 mins</td>
   </tr>
