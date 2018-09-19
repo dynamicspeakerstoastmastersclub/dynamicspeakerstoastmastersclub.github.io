@@ -8,10 +8,10 @@ layout: base
   <header>
     <div class="header-image">
       <div class=text-container>
-          <h1>Dynamic Speakers Toastmasters Club 3332266</h1>
+          <h1>{{ site.title }}</h1>
           <p>{{ page.prog.date | date: "%I:%M%p, %B %-d, %Y" }}</p>
-          <p>XLR8 10th Floor JY Building, JY Square, Lahug</p>
-          <p>Contact No. Earvin Polancos - 0977-243-0494</p>
+          <p>{{ site.address }}</p>
+          <p>{{ site.contact }}</p>
       </div>
     </div>
     <h2 class="program-title">{{ page.title }}</h2>
@@ -23,7 +23,7 @@ layout: base
   <div class="pagebreak">&nbsp;</div>
   <section>{% include program/table_topics_guide.html %}</section>
   <section class="page-margin-top">{% include program/members.html %}</section>
-  
+  <section>{{ content }}</section>
 </div>
 
-{{ content }}
+
