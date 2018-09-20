@@ -81,6 +81,12 @@
   </tr>
   {% endfor %}
 
+  <tr>
+      <th class="h1">Evaluations</th>
+      <td colspan="3"></td>
+    </tr>
+  
+
   {% if include.prog.general_evaluator %}
   <tr>
     <td>General Evaluator</td>
@@ -97,19 +103,14 @@
   </tr>
   {% endif %}
 
-  <tr>
-      <th class="h2">Speech Evaluator</th>
-      <th class="h2">Speaker</th>
-      <th class="h2"></th>
-      <th class="h2"></th>
-    </tr>
 
   {% for p in include.prog.presentations %}
   <tr>
-    <td>{% include member.html id=p.evaluator %}</td>
-    <td colspan="2">
-      {% include member.html id=i.id %}
+    <td>
+        {{p.title}} by {% include member.html id=p.id %}
     </td>
+    <td colspan="2">{% include member.html id=p.evaluator %}</td>
+    
     <td>2-3 mins</td>
   </tr>
   {% endfor %}
