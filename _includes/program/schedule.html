@@ -132,6 +132,14 @@
   </tr>
   {% endif %}
 
+  {% if include.prog.general_evaluator %}
+  <tr>
+    <td>TME Evaluation</td>
+    <td colspan="2">{% include member.html id=include.prog.general_evaluator %}</td>
+    <td></td>
+  </tr>
+  {% endif %}
+
   <tr>
     <th class="h1">Business and Adjournment</th>
     <td colspan="3"></td>
