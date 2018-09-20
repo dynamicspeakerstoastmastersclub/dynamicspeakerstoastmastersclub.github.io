@@ -15,9 +15,10 @@ layout: base
       </div>
     </div>
     <h2 class="program-title">{{ page.title }}</h2>
-    <h3 class="program-tme">
+    <h3 class="program-subtitle">{{ page.subtitle }}</h3>
+    <h4 class="program-tme">
       TME: {% include member.html id=page.prog.tme %}
-    </h3>
+    </h4>
   </header>
   <section>{% include program/schedule.html prog=page.prog %}</section>
   <div class="pagebreak">&nbsp;</div>

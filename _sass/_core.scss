@@ -78,14 +78,21 @@ ol{
     }
   }
 }
-h2.program-title{
+.program-title{
   font-size: 30pt;
   color: $color1;
   text-align: center;
   font-weight: 600;
   margin: 10px 0;
 }
-h3.program-tme{
+.program-subtitle{
+  font-size: 20pt;
+  color: $color1;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.program-tme{
   font-size: 12pt;
   color: $color1;
   text-align: center;
