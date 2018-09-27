@@ -69,6 +69,7 @@
   </tr>
 
   {% for p in include.prog.presentations %}
+  {% if p.hide | default : false %}{% continue %}{% endif %}
   <tr>
     <td>{% include member.html id=p.id %}</td>
     <td>
