@@ -16,3 +16,9 @@ layout: default
   </tr>
 {% endfor %}
 </table>
+
+{% assign all_programs = site.programs | map : "prog" | map : "tme" %}
+{% for m in site.data.members %}
+{{m[0]}}
+{% endfor %}
+{{all_programs}}
