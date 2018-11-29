@@ -2,29 +2,8 @@
 layout: base
 ---
 {% assign tme = site.data.members[page.prog.tme] %}
+{% assign program_layout = page.prog.layout | default : 'layout_default.html' %}
+{% include program/{{program_layout}} %}
 
-
-<div class="container">
-  <header>
-    <div class="header-image">
-      <div class=text-container>
-          <h1>{{ site.title }}</h1>
-          <p>{{ page.prog.date | date: "%I:%M%p, %B %-d, %Y" }}</p>
-          <p>{{ site.address }}</p>
-          <p>{{ site.contact }}</p>
-      </div>
-    </div>
-    <h2 class="program-title">{{ page.title }}</h2>
-    <h3 class="program-subtitle">{{ page.subtitle }}</h3>
-    <h4 class="program-tme">
-      TME: {% include member.html id=page.prog.tme %}
-    </h4>
-  </header>
-  <section>{% include program/schedule.html prog=page.prog %}</section>
-  <div class="pagebreak">&nbsp;</div>
-  <section>{% include program/table_topics_guide.html %}</section>
-  <section class="page-margin-top">{% include program/members.html %}</section>
-  <section>{{ content }}</section>
-</div>
 
 

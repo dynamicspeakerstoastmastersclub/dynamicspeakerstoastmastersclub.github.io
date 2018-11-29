@@ -1,3 +1,2 @@
-serve:
-	docker run --rm --volume="$$(pwd):/srv/jekyll" -it jekyll/jekyll:3.8
-	chown $$(stat -c %u:%g .)" Gemfile.lock && jekyll serve
+run:
+	jekyll serve -H 0.0.0.0
