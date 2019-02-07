@@ -1,2 +1,6 @@
-run:
-	jekyll serve -H 0.0.0.0
+.PHONY: start stop
+
+start:
+	docker-compose up -d
+stop:
+	docker-compose down

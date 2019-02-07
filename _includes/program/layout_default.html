@@ -13,10 +13,13 @@
     <h4 class="program-tme">
       TME: {% include member.html id=page.prog.tme %}
     </h4>
+
   </header>
+  {% if content %}
+  <article class="description">{{ content }}</article>
+  {% endif %}
   <section>{% include program/schedule.html prog=page.prog %}</section>
   <div class="pagebreak">&nbsp;</div>
   <section>{% include program/table_topics_guide.html %}</section>
   <section class="page-margin-top">{% include program/members.html %}</section>
-  <section>{{ content }}</section>
 </div>
