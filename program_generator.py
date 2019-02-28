@@ -91,6 +91,7 @@ for i in range(2):
         "project": "--project name--",
         "title": "--title--",
         "evaluator": "--evaluator--",
+        "duration": "--duration--",
         "hide": False
     })
 
