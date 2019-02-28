@@ -56,11 +56,11 @@
   </tr>
   {% endif %}
 
+  {% if include.prog.presentations | size > 0 %}
   <tr>
     <th class="h1">Prepared Speeches</th>
     <td colspan="3"></td>
   </tr>
-
   <tr>
     <th class="h2">Speaker</th>
     <th class="h2">Pathway, Level, Project</th>
@@ -82,6 +82,7 @@
     <td>{{ p.duration }}</td>
   </tr>
   {% endfor %}
+  {% endif %}
 
   <tr>
       <th class="h1">Evaluations</th>
@@ -154,3 +155,12 @@
   {% endif %}
 
 </table>
+{% if include.prog.declaration or include.prog.food %}
+<h5 class="other-role-header">Other Roles</h5>
+{%  endif %}
+{% if include.prog.declaration %}
+<i class="other-role">Venue: {% include member.html id=include.prog.declaration %}</i><br>
+{%  endif %}
+{% if include.prog.food %}
+<i class="other-role">Food: {% include member.html id=include.prog.food %}</i><br>
+{%  endif %}

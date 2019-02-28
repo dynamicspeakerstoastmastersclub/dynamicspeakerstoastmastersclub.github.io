@@ -1,15 +1,9 @@
-d.mabelin:
-  name: Djane Rey Mabelin
-  pathway: Visionary Communication
-  level: 1
-  title: TM
-
 j.albao:
   name: Jericho Albao
   pathway: Innovative Planning
   level: 1
   title: TM
-
+  
 d.consunji:
   name: Diko Consunji
   pathway: 
@@ -40,17 +34,12 @@ e.polancos:
   level: 
   title: CC
 
-g.ricalde:
-  name: Geraldine Ricalde
-  pathway: Innovative Planning
-  level: 1
+k.tan:
+  name: Kirt Tan
+  pathway: 
+  level:
   title: TM
 
-e.torrefranca:
-  name: Eldridge Torrefranca
-  pathway: Leadership Development
-  level: 1
-  title: TM
 
 r.maylon:
   name: Ron Maylon
@@ -58,14 +47,20 @@ r.maylon:
   level:
   title: TM
 
-e.madduma:
-  name: Erick Madduma
-  pathway: 
-  level:
+g.ricalde:
+  name: Geraldine Ricalde
+  pathway: Innovative Planning
+  level: 1
   title: TM
 
-k.tan:
-  name: Kirt Tan
+d.mabelin:
+  name: Djane Rey Mabelin
+  pathway: Visionary Communication
+  level: 1
+  title: TM
+
+e.madduma:
+  name: Erick Madduma
   pathway: 
   level:
   title: TM
