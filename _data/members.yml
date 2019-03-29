@@ -1,8 +1,8 @@
 j.albao:
   name: Jericho Albao
   pathway: Innovative Planning
-  level: 1
-  title: TM
+  level: 2
+  title: PM1
   
 d.consunji:
   name: Diko Consunji
@@ -50,14 +50,14 @@ r.maylon:
 g.ricalde:
   name: Geraldine Ricalde
   pathway: Innovative Planning
-  level: 1
-  title: TM
+  level: 2
+  title: PM1
 
 d.mabelin:
   name: Djane Rey Mabelin
   pathway: Visionary Communication
-  level: 1
-  title: TM
+  level: 2
+  title: PM1
 
 e.madduma:
   name: Erick Madduma
